@@ -1,0 +1,6 @@
+E:\Dev\DEV\LapTrinhMang\Lab1\Bai2\Bai2\bin\Debug\Bai2.exe.config
+E:\Dev\DEV\LapTrinhMang\Lab1\Bai2\Bai2\bin\Debug\Bai2.exe
+E:\Dev\DEV\LapTrinhMang\Lab1\Bai2\Bai2\bin\Debug\Bai2.pdb
+E:\Dev\DEV\LapTrinhMang\Lab1\Bai2\Bai2\obj\Debug\Bai2.csproj.CoreCompileInputs.cache
+E:\Dev\DEV\LapTrinhMang\Lab1\Bai2\Bai2\obj\Debug\Bai2.exe
+E:\Dev\DEV\LapTrinhMang\Lab1\Bai2\Bai2\obj\Debug\Bai2.pdb
