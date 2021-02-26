@@ -1,0 +1,13 @@
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\bin\Debug\netcoreapp3.1\Server.exe
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\bin\Debug\netcoreapp3.1\Server.deps.json
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\bin\Debug\netcoreapp3.1\Server.dll
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\bin\Debug\netcoreapp3.1\Server.pdb
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\obj\Debug\netcoreapp3.1\Server.dll
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
+E:\Dev\DEV\LapTrinhMang\Lab2\Server\Server\obj\Debug\netcoreapp3.1\Server.csprojAssemblyReference.cache
