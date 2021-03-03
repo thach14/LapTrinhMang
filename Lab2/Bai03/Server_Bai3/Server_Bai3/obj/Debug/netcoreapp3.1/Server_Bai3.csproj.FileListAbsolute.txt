@@ -1,0 +1,13 @@
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\obj\Debug\netcoreapp3.1\Server_Bai3.csprojAssemblyReference.cache
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\obj\Debug\netcoreapp3.1\Server_Bai3.AssemblyInfoInputs.cache
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\obj\Debug\netcoreapp3.1\Server_Bai3.AssemblyInfo.cs
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\obj\Debug\netcoreapp3.1\Server_Bai3.csproj.CoreCompileInputs.cache
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\bin\Debug\netcoreapp3.1\Server_Bai3.exe
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\bin\Debug\netcoreapp3.1\Server_Bai3.deps.json
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\bin\Debug\netcoreapp3.1\Server_Bai3.runtimeconfig.json
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\bin\Debug\netcoreapp3.1\Server_Bai3.runtimeconfig.dev.json
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\bin\Debug\netcoreapp3.1\Server_Bai3.dll
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\bin\Debug\netcoreapp3.1\Server_Bai3.pdb
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\obj\Debug\netcoreapp3.1\Server_Bai3.dll
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\obj\Debug\netcoreapp3.1\Server_Bai3.pdb
+E:\Dev\DEV\LapTrinhMang\Lab2\Bai03\Server_Bai3\Server_Bai3\obj\Debug\netcoreapp3.1\Server_Bai3.genruntimeconfig.cache
