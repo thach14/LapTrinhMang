@@ -1,0 +1,10 @@
+E:\Dev\DEV\LapTrinhMang\Lab2\Lab02.3\Client\Client\bin\Debug\Client.exe.config
+E:\Dev\DEV\LapTrinhMang\Lab2\Lab02.3\Client\Client\bin\Debug\Client.exe
+E:\Dev\DEV\LapTrinhMang\Lab2\Lab02.3\Client\Client\bin\Debug\Client.pdb
+E:\Dev\DEV\LapTrinhMang\Lab2\Lab02.3\Client\Client\obj\Debug\Client.csprojAssemblyReference.cache
+E:\Dev\DEV\LapTrinhMang\Lab2\Lab02.3\Client\Client\obj\Debug\Client.Form1.resources
+E:\Dev\DEV\LapTrinhMang\Lab2\Lab02.3\Client\Client\obj\Debug\Client.Properties.Resources.resources
+E:\Dev\DEV\LapTrinhMang\Lab2\Lab02.3\Client\Client\obj\Debug\Client.csproj.GenerateResource.cache
+E:\Dev\DEV\LapTrinhMang\Lab2\Lab02.3\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+E:\Dev\DEV\LapTrinhMang\Lab2\Lab02.3\Client\Client\obj\Debug\Client.exe
+E:\Dev\DEV\LapTrinhMang\Lab2\Lab02.3\Client\Client\obj\Debug\Client.pdb
