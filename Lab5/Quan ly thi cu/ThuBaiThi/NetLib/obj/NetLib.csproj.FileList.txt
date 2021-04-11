@@ -1,0 +1,5 @@
+bin\Debug\NetLib.dll
+bin\Debug\NetLib.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\NetLib.dll
+obj\Debug\NetLib.pdb

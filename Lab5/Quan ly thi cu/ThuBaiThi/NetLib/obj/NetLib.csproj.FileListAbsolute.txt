@@ -1,0 +1,10 @@
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\NetLib\bin\Debug\NetLib.dll
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\NetLib\bin\Debug\NetLib.pdb
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\NetLib\obj\Debug\ResolveAssemblyReference.cache
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\NetLib\obj\Debug\NetLib.dll
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\NetLib\obj\Debug\NetLib.pdb
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\NetLib\bin\Debug\NetLib.dll
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\NetLib\bin\Debug\NetLib.pdb
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\NetLib\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\NetLib\obj\Debug\NetLib.dll
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\NetLib\obj\Debug\NetLib.pdb

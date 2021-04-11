@@ -1,0 +1,29 @@
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.exe
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.pdb
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\bin\Debug\ThuBaiThi.exe
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\bin\Debug\ThuBaiThi.pdb
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\bin\Debug\NetLib.dll
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\bin\Debug\NetLib.pdb
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ResolveAssemblyReference.cache
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.FrmSendMessage.resources
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.FrmSendMessageToAll.resources
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.FrmServer.resources
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.FrmSetIP.resources
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.FrmThemDeThi.resources
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\MayTinh.MangMayTinh.resources
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\MayTinh.MayTinh.resources
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.Properties.Resources.resources
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang (Nhom Loc)\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.exe
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.pdb
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.FrmServer.resources
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.FrmSetIP.resources
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\MayTinh.MangMayTinh.resources
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\MayTinh.MayTinh.resources
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\obj\Debug\ThuBaiThi.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\bin\Debug\ThuBaiThi.exe
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\bin\Debug\ThuBaiThi.pdb
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\bin\Debug\NetLib.dll
+C:\Documents and Settings\Administrator\Desktop\Source Code\ThuBaiThi\ThuBaiThi\bin\Debug\NetLib.pdb

@@ -1,0 +1,12 @@
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang\Source Code\Client\Client\obj\Debug\Client.exe
+E:\Bai Tap\Lap trinh mang\Bao cao lap trinh mang\Source Code\Client\Client\obj\Debug\Client.pdb
+C:\Documents and Settings\Administrator\Desktop\Source Code\Client\Client\obj\Debug\Client.exe
+C:\Documents and Settings\Administrator\Desktop\Source Code\Client\Client\obj\Debug\Client.pdb
+C:\Documents and Settings\Administrator\Desktop\Source Code\Client\Client\bin\Debug\Client.exe
+C:\Documents and Settings\Administrator\Desktop\Source Code\Client\Client\bin\Debug\Client.pdb
+C:\Documents and Settings\Administrator\Desktop\Source Code\Client\Client\bin\Debug\NetLib.dll
+C:\Documents and Settings\Administrator\Desktop\Source Code\Client\Client\bin\Debug\NetLib.pdb
+C:\Documents and Settings\Administrator\Desktop\Source Code\Client\Client\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\Source Code\Client\Client\obj\Debug\Client.Client.resources
+C:\Documents and Settings\Administrator\Desktop\Source Code\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\Source Code\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
