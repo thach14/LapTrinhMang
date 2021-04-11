@@ -1,0 +1,6 @@
+E:\Dev\DEV\LapTrinhMang\ThuBaiThiDonGian\Common\bin\Debug\Common.dll
+E:\Dev\DEV\LapTrinhMang\ThuBaiThiDonGian\Common\bin\Debug\Common.pdb
+E:\Dev\DEV\LapTrinhMang\ThuBaiThiDonGian\Common\obj\Debug\Common.csprojAssemblyReference.cache
+E:\Dev\DEV\LapTrinhMang\ThuBaiThiDonGian\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\Dev\DEV\LapTrinhMang\ThuBaiThiDonGian\Common\obj\Debug\Common.dll
+E:\Dev\DEV\LapTrinhMang\ThuBaiThiDonGian\Common\obj\Debug\Common.pdb
