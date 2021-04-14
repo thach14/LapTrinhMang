@@ -14,6 +14,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using Common;
+using System.Data.SqlClient;
 
 namespace Server
 {
@@ -23,12 +24,17 @@ namespace Server
         Socket server;
         List<Socket> clientList;
 
+        List<Student> listStudent = new List<Student>();
+        List<MonThi> listMonThi = new List<MonThi>();
+        MonThi monThi;
+        Student sinhVien;
         private const int PORT = 2010;
 
         int counter = 0;
         System.Timers.Timer countdown;
 
         OpenFileDialog dialog;
+        FolderBrowserDialog folder;
         string fileName;
 
         public Server()
@@ -122,7 +128,7 @@ namespace Server
                             string fileName = file.FileInfo.Name;
                             AddMessage(client.RemoteEndPoint.ToString() + ": Đã nhận bài làm, tập tin có tên: " + fileName);
 
-                            using (var fileStream = File.Create(fileName))
+                            using (var fileStream = File.Create(txtLuuBai.Text + "/"+fileName))
                             {
                                 fileStream.Write(file.FileContent, 0, file.FileContent.Length);
                             }
@@ -190,20 +196,25 @@ namespace Server
 
         private void btnSendStudents_Click(object sender, EventArgs e)
         {
-            List<Student> listStudent = new List<Student>();
-            listStudent.Add(new Student()
+
+            string sqlserver = @"server=.; database=Students; integrated security = true;";
+            SqlConnection connection = new SqlConnection(sqlserver);
+            SqlDataReader read;
+            SqlCommand cmd = connection.CreateCommand();
+            connection.Open();
+
+            cmd.CommandText = "Select * from ThongTinSinhVien ";
+            read = cmd.ExecuteReader();
+            while (read.Read())
             {
-                ID = "1812756",
-                FirstName = "Hieu",
-                LastName = "Nguyen Trong"
-            });
-            
-            listStudent.Add(new Student()
-            {
-                ID = "1812751",
-                FirstName = "Ha",
-                LastName = "Nguyen Thi"
-            });
+                sinhVien = new Student();
+                sinhVien.ID = read.GetValue(0).ToString();
+                sinhVien.FullName = read.GetValue(1).ToString();
+                listStudent.Add(sinhVien);
+            }
+            cmd.Dispose();
+            read.Close();
+            connection.Close();
 
             ServerResponse container = new ServerResponse();
             container.Type = ServerResponseType.SendList;
@@ -232,21 +243,30 @@ namespace Server
         private void btnSendFile_Click(object sender, EventArgs e)
         {
           
-            if (txtTenDeThi.Text != null)
+            if (txtTenDeThi.Text != null&& txtTenDeThi.Text != "Chọn đề thi")
             {
 
                 FileResponse fileResponse = new FileResponse(fileName);
-                ServerResponse container = new ServerResponse();
-                container.Type = ServerResponseType.SendFile;
-                container.Data = fileResponse;
+                ServerResponse container1 = new ServerResponse();
+                container1.Type = ServerResponseType.SendFile;
+                ServerResponse container2= new ServerResponse();
+                ServerResponse container3= new ServerResponse();
 
-                byte[] buffer = Serialize(container);
+                container1.Data = fileResponse;
+                container2.Type = ServerResponseType.SendString;
+
+                List<string> listDeGui = new List<string>();
+                listDeGui.Add(cbbMonThi.Text);
+                container2.Data = listDeGui;
+                byte[] buffer1 = Serialize(container1);
+                byte[] buffer2 = Serialize(container2);
 
                 foreach (Socket client in clientList)
                 {
                     try
                     {
-                        client.Send(buffer);
+                        client.Send(buffer1);
+                        client.Send(buffer2);
 
                         AddMessage(client.RemoteEndPoint.ToString() + ": " + "Đã gửi đề thi thành công");
                     }
@@ -325,6 +345,64 @@ namespace Server
                 txtTenDeThi.Text = fileName;
 
                
+            }
+        }
+
+        
+        private void Server_Load(object sender, EventArgs e)
+        {
+            string sqlserver = @"server=.; database=Students; integrated security = true;";
+            SqlConnection connection = new SqlConnection(sqlserver);
+            SqlDataReader read;
+            SqlCommand cmd = connection.CreateCommand();
+            connection.Open();
+
+            cmd.CommandText = "Select * from MonThi ";
+            read = cmd.ExecuteReader();
+            while (read.Read())
+            {
+                monThi = new MonThi()
+;
+                monThi.ID = read.GetValue(0).ToString();
+                monThi.Name = read.GetValue(1).ToString();
+                listMonThi.Add(monThi);
+            }
+            cmd.Dispose();
+            read.Close();
+            connection.Close();
+            foreach (MonThi mon in listMonThi)
+            {
+                cbbMonThi.Items.Add(mon.Name);
+            }
+            cbbMonThi.Text = cbbMonThi.Items[1].ToString();
+        }
+
+        private void btnDisconnect_Click(object sender, EventArgs e)
+        {
+            server.Close();
+            AddMessage("Đã đóng kết nối tất cả các client!!");
+
+            IP = new IPEndPoint(IPAddress.Any, PORT);
+            server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            clientList = new List<Socket>();
+
+            server.Bind(IP);
+
+            Thread listen = new Thread(StartServer);
+
+            listen.IsBackground = true;
+            listen.Start();
+        }
+        private void btnLuuBai_Click(object sender, EventArgs e)
+        {
+            folder = new FolderBrowserDialog();
+
+            if (folder.ShowDialog() == DialogResult.OK)
+            {
+                fileName = folder.SelectedPath;
+               txtLuuBai.Text = fileName;
+
+
             }
         }
     }

@@ -15,15 +15,17 @@ using System.Threading;
 using System.Runtime.Serialization.Formatters.Binary;
 using Common;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace Client
 {
     public partial class Client : Form
     {
         private const int SERVER_PORT = 2010;
-
+        string file = "";
         IPEndPoint IP;
         Socket client;
+        
 
         System.Timers.Timer countdown;
         int counter = 0;
@@ -99,7 +101,7 @@ namespace Client
 
                             string fileName = fileResponse.FileInfo.Name;
                             lblDeThi.Text = fileName;
-
+                            file = fileName;
                             using (var fileStream = File.Create(fileName))
                             {
                                 fileStream.Write(fileResponse.FileContent, 0, fileResponse.FileContent.Length);
@@ -117,6 +119,9 @@ namespace Client
                             break;
 
                         case ServerResponseType.SendString:
+                            List<string> monthi = container.Data as List<string>;
+
+                            lblMonThi.Text = monthi[0].ToString();
                             break;
 
                         case ServerResponseType.BeginExam:
@@ -272,6 +277,11 @@ namespace Client
                 MessageBox.Show(ex.Message);
                 CloseConnection();
             }
+        }
+
+        private void lblDeThi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(file);
         }
     }
 }

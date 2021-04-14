@@ -98,7 +98,7 @@
             // btnFinishExam
             // 
             this.btnFinishExam.Enabled = false;
-            this.btnFinishExam.Location = new System.Drawing.Point(120, 373);
+            this.btnFinishExam.Location = new System.Drawing.Point(112, 430);
             this.btnFinishExam.Name = "btnFinishExam";
             this.btnFinishExam.Size = new System.Drawing.Size(290, 25);
             this.btnFinishExam.TabIndex = 7;
@@ -122,7 +122,7 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Location = new System.Drawing.Point(12, 185);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(522, 172);
+            this.groupBox3.Size = new System.Drawing.Size(522, 221);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông Tin Sinh Viên";
@@ -136,6 +136,7 @@
             this.lblDeThi.TabIndex = 2;
             this.lblDeThi.TabStop = true;
             this.lblDeThi.Text = "N/A";
+            this.lblDeThi.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDeThi_LinkClicked);
             // 
             // lblMaSo
             // 
@@ -280,7 +281,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 411);
+            this.ClientSize = new System.Drawing.Size(548, 467);
             this.Controls.Add(this.btnFinishExam);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

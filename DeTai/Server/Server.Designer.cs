@@ -40,6 +40,12 @@
             this.txtTenDeThi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnChonDeThi = new System.Windows.Forms.Button();
+            this.cbbMonThi = new System.Windows.Forms.ComboBox();
+            this.btnDisconnect = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnLuuBai = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtLuuBai = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -58,9 +64,9 @@
             // 
             this.btnSendStudents.Location = new System.Drawing.Point(217, 174);
             this.btnSendStudents.Name = "btnSendStudents";
-            this.btnSendStudents.Size = new System.Drawing.Size(133, 45);
+            this.btnSendStudents.Size = new System.Drawing.Size(203, 45);
             this.btnSendStudents.TabIndex = 6;
-            this.btnSendStudents.Text = "Gửi Danh sách Sinh viên";
+            this.btnSendStudents.Text = "Load Danh sách Sinh viên";
             this.btnSendStudents.UseVisualStyleBackColor = true;
             this.btnSendStudents.Click += new System.EventHandler(this.btnSendStudents_Click);
             // 
@@ -138,6 +144,7 @@
             // 
             this.txtTenDeThi.Location = new System.Drawing.Point(270, 123);
             this.txtTenDeThi.Name = "txtTenDeThi";
+            this.txtTenDeThi.ReadOnly = true;
             this.txtTenDeThi.Size = new System.Drawing.Size(150, 20);
             this.txtTenDeThi.TabIndex = 14;
             this.txtTenDeThi.Text = "Chọn đề thi";
@@ -162,11 +169,74 @@
             this.btnChonDeThi.UseVisualStyleBackColor = true;
             this.btnChonDeThi.Click += new System.EventHandler(this.btnChonDeThi_Click);
             // 
+            // cbbMonThi
+            // 
+            this.cbbMonThi.FormattingEnabled = true;
+            this.cbbMonThi.Items.AddRange(new object[] {
+            "laptrinhmang"});
+            this.cbbMonThi.Location = new System.Drawing.Point(270, 96);
+            this.cbbMonThi.Name = "cbbMonThi";
+            this.cbbMonThi.Size = new System.Drawing.Size(121, 21);
+            this.cbbMonThi.TabIndex = 17;
+            // 
+            // btnDisconnect
+            // 
+            this.btnDisconnect.Location = new System.Drawing.Point(90, 417);
+            this.btnDisconnect.Name = "btnDisconnect";
+            this.btnDisconnect.Size = new System.Drawing.Size(75, 23);
+            this.btnDisconnect.TabIndex = 18;
+            this.btnDisconnect.Text = "Disconnect";
+            this.btnDisconnect.UseVisualStyleBackColor = true;
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(217, 99);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Môn thi:";
+            // 
+            // btnLuuBai
+            // 
+            this.btnLuuBai.Location = new System.Drawing.Point(313, 62);
+            this.btnLuuBai.Name = "btnLuuBai";
+            this.btnLuuBai.Size = new System.Drawing.Size(75, 23);
+            this.btnLuuBai.TabIndex = 22;
+            this.btnLuuBai.Text = "đường dẫn lưu bài";
+            this.btnLuuBai.UseVisualStyleBackColor = true;
+            this.btnLuuBai.Click += new System.EventHandler(this.btnLuuBai_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(69, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "lưu bài thi";
+            // 
+            // txtLuuBai
+            // 
+            this.txtLuuBai.Location = new System.Drawing.Point(122, 64);
+            this.txtLuuBai.Name = "txtLuuBai";
+            this.txtLuuBai.ReadOnly = true;
+            this.txtLuuBai.Size = new System.Drawing.Size(150, 20);
+            this.txtLuuBai.TabIndex = 20;
+            this.txtLuuBai.Text = "chọn đường dẫn";
+            // 
             // Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 613);
+            this.Controls.Add(this.btnLuuBai);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtLuuBai);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnDisconnect);
+            this.Controls.Add(this.cbbMonThi);
             this.Controls.Add(this.btnChonDeThi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTenDeThi);
@@ -180,6 +250,7 @@
             this.Name = "Server";
             this.Text = "Server";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Server_FormClosing);
+            this.Load += new System.EventHandler(this.Server_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -202,6 +273,12 @@
         private System.Windows.Forms.TextBox txtTenDeThi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnChonDeThi;
+        private System.Windows.Forms.ComboBox cbbMonThi;
+        private System.Windows.Forms.Button btnDisconnect;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnLuuBai;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtLuuBai;
     }
 }
 

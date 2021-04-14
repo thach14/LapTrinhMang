@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileResponse.cs" />
+    <Compile Include="MonThi.cs" />
     <Compile Include="ServerResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
