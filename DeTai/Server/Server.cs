@@ -15,6 +15,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using Common;
 using System.Data.SqlClient;
+using System.Net.NetworkInformation;
+using System.Diagnostics;
 
 namespace Server
 {
@@ -49,17 +51,29 @@ namespace Server
 
             Start();
         }
-
-        public string GetIP()
+        void GetActiveIP()
         {
-            var host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach(var ip in host.AddressList)
+            foreach (NetworkInterface f in NetworkInterface.GetAllNetworkInterfaces())
             {
-                if (ip.AddressFamily == AddressFamily.InterNetwork)
-                    return ip.ToString();
+                if (f.OperationalStatus == OperationalStatus.Up)
+                {
+                    IPInterfaceProperties ipInterface = f.GetIPProperties();
+                    if (ipInterface.GatewayAddresses.Count > 0)
+                    {
+                        foreach (UnicastIPAddressInformation unicastAddress in ipInterface.UnicastAddresses)
+                        {
+                            if ((unicastAddress.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork) && (unicastAddress.IPv4Mask.ToString() != "0.0.0.0"))
+                            {
+                                txtIP.Text = unicastAddress.Address.ToString();
+                                break;
+
+                            }
+                        }
+                    }
+                }
             }
-            return "Không có kết nối mạng";
         }
+        
         void Start()
         {
             IP = new IPEndPoint(IPAddress.Any, PORT);
@@ -73,7 +87,7 @@ namespace Server
             listen.IsBackground = true;
             listen.Start();
 
-            AddMessage("Server đã khởi động tại địa chỉ 127.0.0.1:" + PORT);
+            AddMessage("Server đã khởi động!");
         }
 
         void StartServer()
@@ -135,7 +149,7 @@ namespace Server
                             FileResponse file = container.Data as FileResponse;
 
                             string fileName = file.FileInfo.Name;
-                            AddMessage(client.RemoteEndPoint.ToString() + ": Đã nhận bài làm, tập tin có tên: " + fileName);
+                            
 
                             using (var fileStream = File.Create(txtLuuBai.Text + "/"+fileName))
                             {
@@ -158,6 +172,11 @@ namespace Server
                         case ServerResponseType.BeginExam:
                             break;
                         case ServerResponseType.FinishExam:
+                            break;
+                        case ServerResponseType.SendMessage:
+                            string go = container.Data as string;
+                            AddMessage(go+" đã nộp bài");
+
                             break;
                         case ServerResponseType.LockClient:
                             break;
@@ -258,15 +277,17 @@ namespace Server
                 FileResponse fileResponse = new FileResponse(fileName);
                 ServerResponse container1 = new ServerResponse();
                 container1.Type = ServerResponseType.SendFile;
-                ServerResponse container2= new ServerResponse();
-                ServerResponse container3= new ServerResponse();
-
                 container1.Data = fileResponse;
-                container2.Type = ServerResponseType.SendString;
 
+
+                ServerResponse container2 = new ServerResponse();
+                container2.Type = ServerResponseType.SendString;
                 List<string> listDeGui = new List<string>();
                 listDeGui.Add(cbbMonThi.Text);
+
                 container2.Data = listDeGui;
+
+
                 byte[] buffer1 = Serialize(container1);
                 byte[] buffer2 = Serialize(container2);
 
@@ -279,7 +300,7 @@ namespace Server
 
                         AddMessage(client.RemoteEndPoint.ToString() + ": " + "Đã gửi đề thi thành công");
                     }
-                    catch (Exception ex)
+                    catch 
                     {
                         AddMessage(client.RemoteEndPoint.ToString() + ": " + "Đã xảy ra sự cố trong quá trình gửi đề thi. Đã đóng kết nối");
 
@@ -288,13 +309,16 @@ namespace Server
                     }
                 }
             }
+            else
+            {
+                AddMessage("Vui lòng chọn đề thi!");
+            }
         }
 
         private void btnBegin_Click(object sender, EventArgs e)
         {
             int minute = Convert.ToInt32(txtSetTime.Text);
             counter = minute * 60; 
-
             countdown.Enabled = true;
 
             ServerResponse container = new ServerResponse();
@@ -311,7 +335,7 @@ namespace Server
 
                     AddMessage(client.RemoteEndPoint.ToString() + ": " + "Đã bắt đầu làm bài thi");
                 }
-                catch (Exception ex)
+                catch 
                 {
                     AddMessage(client.RemoteEndPoint.ToString() + ": " + "Đã xảy ra sự cố trong quá trình gửi yêu cầu làm bài. Đã đóng kết nối");
 
@@ -360,7 +384,7 @@ namespace Server
         
         private void Server_Load(object sender, EventArgs e)
         {
-            txtIP.Text = GetIP();
+            GetActiveIP();
             string sqlserver = @"server=.; database=Students; integrated security = true;";
             SqlConnection connection = new SqlConnection(sqlserver);
             SqlDataReader read;
@@ -444,6 +468,18 @@ namespace Server
                     txtMesseage.Text = "";
                 }
             }
+
+        }
+
+
+        
+        private void txtIP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }

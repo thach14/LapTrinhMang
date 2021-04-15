@@ -44,31 +44,34 @@
             this.btnDisconnect = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLuuBai = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtLuuBai = new System.Windows.Forms.TextBox();
             this.txtMesseage = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtIP = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lsvMain
             // 
             this.lsvMain.HideSelection = false;
-            this.lsvMain.Location = new System.Drawing.Point(217, 229);
+            this.lsvMain.Location = new System.Drawing.Point(53, 295);
             this.lsvMain.Name = "lsvMain";
-            this.lsvMain.Size = new System.Drawing.Size(458, 205);
+            this.lsvMain.Size = new System.Drawing.Size(583, 205);
             this.lsvMain.TabIndex = 3;
             this.lsvMain.UseCompatibleStateImageBehavior = false;
             this.lsvMain.View = System.Windows.Forms.View.List;
             // 
             // btnSendStudents
             // 
-            this.btnSendStudents.Location = new System.Drawing.Point(217, 174);
+            this.btnSendStudents.Location = new System.Drawing.Point(409, 80);
             this.btnSendStudents.Name = "btnSendStudents";
-            this.btnSendStudents.Size = new System.Drawing.Size(203, 45);
+            this.btnSendStudents.Size = new System.Drawing.Size(227, 45);
             this.btnSendStudents.TabIndex = 6;
             this.btnSendStudents.Text = "Load Danh sách Sinh viên";
             this.btnSendStudents.UseVisualStyleBackColor = true;
@@ -76,9 +79,9 @@
             // 
             // btnBegin
             // 
-            this.btnBegin.Location = new System.Drawing.Point(78, 345);
+            this.btnBegin.Location = new System.Drawing.Point(543, 235);
             this.btnBegin.Name = "btnBegin";
-            this.btnBegin.Size = new System.Drawing.Size(78, 45);
+            this.btnBegin.Size = new System.Drawing.Size(93, 45);
             this.btnBegin.TabIndex = 7;
             this.btnBegin.Text = "Bắt đầu";
             this.btnBegin.UseVisualStyleBackColor = true;
@@ -86,9 +89,9 @@
             // 
             // btnSendFile
             // 
-            this.btnSendFile.Location = new System.Drawing.Point(464, 174);
+            this.btnSendFile.Location = new System.Drawing.Point(412, 234);
             this.btnSendFile.Name = "btnSendFile";
-            this.btnSendFile.Size = new System.Drawing.Size(72, 45);
+            this.btnSendFile.Size = new System.Drawing.Size(93, 45);
             this.btnSendFile.TabIndex = 9;
             this.btnSendFile.Text = "Phát đề";
             this.btnSendFile.UseVisualStyleBackColor = true;
@@ -97,9 +100,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblTimeLeft);
-            this.groupBox1.Location = new System.Drawing.Point(542, 159);
+            this.groupBox1.Location = new System.Drawing.Point(517, 145);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(133, 64);
+            this.groupBox1.Size = new System.Drawing.Size(119, 59);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thời gian còn lại:";
@@ -108,7 +111,7 @@
             // 
             this.lblTimeLeft.AutoSize = true;
             this.lblTimeLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeLeft.Location = new System.Drawing.Point(16, 26);
+            this.lblTimeLeft.Location = new System.Drawing.Point(28, 26);
             this.lblTimeLeft.Name = "lblTimeLeft";
             this.lblTimeLeft.Size = new System.Drawing.Size(54, 20);
             this.lblTimeLeft.TabIndex = 11;
@@ -117,9 +120,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtSetTime);
-            this.groupBox2.Location = new System.Drawing.Point(72, 280);
+            this.groupBox2.Location = new System.Drawing.Point(409, 145);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(78, 59);
+            this.groupBox2.Size = new System.Drawing.Size(102, 59);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Set Time:";
@@ -127,9 +130,9 @@
             // txtSetTime
             // 
             this.txtSetTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetTime.Location = new System.Drawing.Point(6, 19);
+            this.txtSetTime.Location = new System.Drawing.Point(3, 19);
             this.txtSetTime.Name = "txtSetTime";
-            this.txtSetTime.Size = new System.Drawing.Size(72, 31);
+            this.txtSetTime.Size = new System.Drawing.Size(99, 31);
             this.txtSetTime.TabIndex = 13;
             this.txtSetTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -138,7 +141,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(170, 18);
+            this.label1.Location = new System.Drawing.Point(71, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 42);
             this.label1.TabIndex = 13;
@@ -146,7 +149,7 @@
             // 
             // txtTenDeThi
             // 
-            this.txtTenDeThi.Location = new System.Drawing.Point(270, 123);
+            this.txtTenDeThi.Location = new System.Drawing.Point(71, 64);
             this.txtTenDeThi.Name = "txtTenDeThi";
             this.txtTenDeThi.ReadOnly = true;
             this.txtTenDeThi.Size = new System.Drawing.Size(150, 20);
@@ -157,19 +160,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(217, 126);
+            this.label2.Location = new System.Drawing.Point(18, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "Đề thi";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnChonDeThi
             // 
-            this.btnChonDeThi.Location = new System.Drawing.Point(461, 121);
+            this.btnChonDeThi.Image = global::Server.Properties.Resources.icons8_folder_32;
+            this.btnChonDeThi.Location = new System.Drawing.Point(248, 54);
             this.btnChonDeThi.Name = "btnChonDeThi";
-            this.btnChonDeThi.Size = new System.Drawing.Size(75, 23);
+            this.btnChonDeThi.Size = new System.Drawing.Size(75, 39);
             this.btnChonDeThi.TabIndex = 16;
-            this.btnChonDeThi.Text = "Chọn đề thi";
             this.btnChonDeThi.UseVisualStyleBackColor = true;
             this.btnChonDeThi.Click += new System.EventHandler(this.btnChonDeThi_Click);
             // 
@@ -178,14 +182,14 @@
             this.cbbMonThi.FormattingEnabled = true;
             this.cbbMonThi.Items.AddRange(new object[] {
             "laptrinhmang"});
-            this.cbbMonThi.Location = new System.Drawing.Point(270, 96);
+            this.cbbMonThi.Location = new System.Drawing.Point(71, 21);
             this.cbbMonThi.Name = "cbbMonThi";
-            this.cbbMonThi.Size = new System.Drawing.Size(121, 21);
+            this.cbbMonThi.Size = new System.Drawing.Size(252, 21);
             this.cbbMonThi.TabIndex = 17;
             // 
             // btnDisconnect
             // 
-            this.btnDisconnect.Location = new System.Drawing.Point(81, 411);
+            this.btnDisconnect.Location = new System.Drawing.Point(409, 46);
             this.btnDisconnect.Name = "btnDisconnect";
             this.btnDisconnect.Size = new System.Drawing.Size(75, 23);
             this.btnDisconnect.TabIndex = 18;
@@ -196,7 +200,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(217, 99);
+            this.label3.Location = new System.Drawing.Point(18, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 19;
@@ -204,42 +208,33 @@
             // 
             // btnLuuBai
             // 
-            this.btnLuuBai.Location = new System.Drawing.Point(313, 62);
+            this.btnLuuBai.Image = global::Server.Properties.Resources.icons8_folder_32;
+            this.btnLuuBai.Location = new System.Drawing.Point(248, 19);
             this.btnLuuBai.Name = "btnLuuBai";
-            this.btnLuuBai.Size = new System.Drawing.Size(75, 23);
+            this.btnLuuBai.Size = new System.Drawing.Size(75, 38);
             this.btnLuuBai.TabIndex = 22;
-            this.btnLuuBai.Text = "đường dẫn lưu bài";
             this.btnLuuBai.UseVisualStyleBackColor = true;
             this.btnLuuBai.Click += new System.EventHandler(this.btnLuuBai_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(69, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "lưu bài thi";
-            // 
             // txtLuuBai
             // 
-            this.txtLuuBai.Location = new System.Drawing.Point(122, 64);
+            this.txtLuuBai.Location = new System.Drawing.Point(6, 30);
             this.txtLuuBai.Name = "txtLuuBai";
             this.txtLuuBai.ReadOnly = true;
-            this.txtLuuBai.Size = new System.Drawing.Size(150, 20);
+            this.txtLuuBai.Size = new System.Drawing.Size(215, 20);
             this.txtLuuBai.TabIndex = 20;
-            this.txtLuuBai.Text = "chọn đường dẫn";
+            this.txtLuuBai.Text = "D:\\";
             // 
             // txtMesseage
             // 
-            this.txtMesseage.Location = new System.Drawing.Point(220, 471);
+            this.txtMesseage.Location = new System.Drawing.Point(53, 521);
             this.txtMesseage.Name = "txtMesseage";
-            this.txtMesseage.Size = new System.Drawing.Size(351, 20);
+            this.txtMesseage.Size = new System.Drawing.Size(486, 20);
             this.txtMesseage.TabIndex = 23;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(600, 468);
+            this.btnSend.Location = new System.Drawing.Point(561, 518);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 24;
@@ -250,37 +245,59 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(461, 18);
+            this.label5.Location = new System.Drawing.Point(406, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 13);
+            this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 25;
-            this.label5.Text = "IP";
+            this.label5.Text = "IP Server";
             // 
             // txtIP
             // 
-            this.txtIP.Location = new System.Drawing.Point(503, 18);
+            this.txtIP.Location = new System.Drawing.Point(483, 15);
             this.txtIP.Name = "txtIP";
-            this.txtIP.Size = new System.Drawing.Size(100, 20);
+            this.txtIP.ReadOnly = true;
+            this.txtIP.Size = new System.Drawing.Size(153, 20);
             this.txtIP.TabIndex = 26;
+            this.txtIP.TextChanged += new System.EventHandler(this.txtIP_TextChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtLuuBai);
+            this.groupBox3.Controls.Add(this.btnLuuBai);
+            this.groupBox3.Location = new System.Drawing.Point(47, 75);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(352, 72);
+            this.groupBox3.TabIndex = 27;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Chọn đường dẫn lưu bài thi";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.cbbMonThi);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.txtTenDeThi);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.btnChonDeThi);
+            this.groupBox4.Location = new System.Drawing.Point(47, 167);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(352, 113);
+            this.groupBox4.TabIndex = 28;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Chọn môn thi và đề thi";
             // 
             // Server
             // 
+            this.AcceptButton = this.btnSend;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 613);
+            this.ClientSize = new System.Drawing.Size(682, 563);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtIP);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMesseage);
-            this.Controls.Add(this.btnLuuBai);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtLuuBai);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnDisconnect);
-            this.Controls.Add(this.cbbMonThi);
-            this.Controls.Add(this.btnChonDeThi);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTenDeThi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -288,6 +305,8 @@
             this.Controls.Add(this.btnBegin);
             this.Controls.Add(this.btnSendStudents);
             this.Controls.Add(this.lsvMain);
+            this.MaximumSize = new System.Drawing.Size(698, 602);
+            this.MinimumSize = new System.Drawing.Size(698, 602);
             this.Name = "Server";
             this.Text = "Server";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Server_FormClosing);
@@ -296,6 +315,10 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,12 +341,13 @@
         private System.Windows.Forms.Button btnDisconnect;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLuuBai;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtLuuBai;
         private System.Windows.Forms.TextBox txtMesseage;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtIP;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 

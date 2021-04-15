@@ -35,7 +35,6 @@ namespace Client
             InitializeComponent();
 
             CheckForIllegalCrossThreadCalls = false;
-            btnFinishExam.Enabled = true;
 
             countdown = new System.Timers.Timer();
             countdown.Interval = 1000;
@@ -45,6 +44,8 @@ namespace Client
 
         void Connect(string hostname, int port)
         {
+           
+
             IP = new IPEndPoint(IPAddress.Parse(hostname), port);
             client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             string computerName = System.Environment.MachineName;
@@ -62,6 +63,7 @@ namespace Client
                 };
 
                 client.Send(Serialize(container));
+                btnConnectToServer.Enabled = false;
             }
             catch
             {
@@ -185,7 +187,6 @@ namespace Client
         private void btnConnectToServer_Click(object sender, EventArgs e)
         {
             string IP = txtServerIP.Text;
-
             Connect(IP, SERVER_PORT);
         }
 
@@ -222,8 +223,7 @@ namespace Client
             {
                 countdown.Stop();
                 MessageBox.Show("Đã hết thời gian làm bài. Thu bài");
-
-               
+    
             }
         }
 
@@ -243,11 +243,14 @@ namespace Client
 
                     MessageBox.Show("Thông tin sinh viên đã được ghi nhận");
                 }
-                catch (Exception ex)
+                catch 
                 {
                     MessageBox.Show("Có lỗi trong quá trình gửi thông tin sinh viên lên server");
                     CloseConnection();
                 }
+                btnSendStudentInfo.Enabled = false;
+                cbDSThi.Enabled = false;
+                btnFinishExam.Enabled = true;
             }
         }
 
@@ -274,18 +277,24 @@ namespace Client
                 Type = ServerResponseType.SendFile,
                 Data = file
             };
+            ServerResponse container2 = new ServerResponse();
+            container2.Type = ServerResponseType.SendMessage;
+            container2.Data = cbDSThi.Text;
 
             try
             {
                 client.Send(Serialize(container));
+                client.Send(Serialize(container2));
+
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Có lỗi xảy ra!!!");
                 CloseConnection();
             }
         }
 
+        
         private void lblDeThi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(file);
