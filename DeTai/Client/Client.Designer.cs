@@ -50,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSendStudentInfo = new System.Windows.Forms.Button();
             this.cbDSThi = new System.Windows.Forms.ComboBox();
+            this.rtxtMesseage = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -108,6 +109,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.rtxtMesseage);
             this.groupBox3.Controls.Add(this.lblDeThi);
             this.groupBox3.Controls.Add(this.lblMaSo);
             this.groupBox3.Controls.Add(this.lblThoiGianConLai);
@@ -277,6 +279,14 @@
             this.cbDSThi.TabIndex = 0;
             this.cbDSThi.SelectedIndexChanged += new System.EventHandler(this.cbDSThi_SelectedIndexChanged);
             // 
+            // rtxtMesseage
+            // 
+            this.rtxtMesseage.Location = new System.Drawing.Point(279, 19);
+            this.rtxtMesseage.Name = "rtxtMesseage";
+            this.rtxtMesseage.Size = new System.Drawing.Size(226, 185);
+            this.rtxtMesseage.TabIndex = 3;
+            this.rtxtMesseage.Text = "";
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +334,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSendStudentInfo;
         private System.Windows.Forms.ComboBox cbDSThi;
+        private System.Windows.Forms.RichTextBox rtxtMesseage;
     }
 }
 

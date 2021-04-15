@@ -15,7 +15,8 @@ namespace Common
         SendString,
         BeginExam,
         FinishExam,
-        LockClient
+        LockClient,
+        SendMessage
     }
 
     [Serializable]

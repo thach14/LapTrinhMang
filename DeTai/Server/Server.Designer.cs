@@ -46,6 +46,10 @@
             this.btnLuuBai = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtLuuBai = new System.Windows.Forms.TextBox();
+            this.txtMesseage = new System.Windows.Forms.TextBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtIP = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +59,7 @@
             this.lsvMain.HideSelection = false;
             this.lsvMain.Location = new System.Drawing.Point(217, 229);
             this.lsvMain.Name = "lsvMain";
-            this.lsvMain.Size = new System.Drawing.Size(458, 375);
+            this.lsvMain.Size = new System.Drawing.Size(458, 205);
             this.lsvMain.TabIndex = 3;
             this.lsvMain.UseCompatibleStateImageBehavior = false;
             this.lsvMain.View = System.Windows.Forms.View.List;
@@ -181,7 +185,7 @@
             // 
             // btnDisconnect
             // 
-            this.btnDisconnect.Location = new System.Drawing.Point(90, 417);
+            this.btnDisconnect.Location = new System.Drawing.Point(81, 411);
             this.btnDisconnect.Name = "btnDisconnect";
             this.btnDisconnect.Size = new System.Drawing.Size(75, 23);
             this.btnDisconnect.TabIndex = 18;
@@ -226,11 +230,48 @@
             this.txtLuuBai.TabIndex = 20;
             this.txtLuuBai.Text = "chọn đường dẫn";
             // 
+            // txtMesseage
+            // 
+            this.txtMesseage.Location = new System.Drawing.Point(220, 471);
+            this.txtMesseage.Name = "txtMesseage";
+            this.txtMesseage.Size = new System.Drawing.Size(351, 20);
+            this.txtMesseage.TabIndex = 23;
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(600, 468);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.TabIndex = 24;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(461, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(17, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "IP";
+            // 
+            // txtIP
+            // 
+            this.txtIP.Location = new System.Drawing.Point(503, 18);
+            this.txtIP.Name = "txtIP";
+            this.txtIP.Size = new System.Drawing.Size(100, 20);
+            this.txtIP.TabIndex = 26;
+            // 
             // Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 613);
+            this.Controls.Add(this.txtIP);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnSend);
+            this.Controls.Add(this.txtMesseage);
             this.Controls.Add(this.btnLuuBai);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtLuuBai);
@@ -279,6 +320,10 @@
         private System.Windows.Forms.Button btnLuuBai;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtLuuBai;
+        private System.Windows.Forms.TextBox txtMesseage;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtIP;
     }
 }
 

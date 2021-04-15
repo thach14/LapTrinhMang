@@ -140,6 +140,13 @@ namespace Client
                             break;
                         case ServerResponseType.LockClient:
                             break;
+                        case ServerResponseType.SendMessage:
+                            string mess = container.Data as string;
+                            rtxtMesseage.Text += "Server: " + mess + "\n";
+                            
+
+
+                            break;
                         default:
                             break;
                     }

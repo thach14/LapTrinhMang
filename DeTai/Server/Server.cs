@@ -50,7 +50,16 @@ namespace Server
             Start();
         }
 
-
+        public string GetIP()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach(var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                    return ip.ToString();
+            }
+            return "Không có kết nối mạng";
+        }
         void Start()
         {
             IP = new IPEndPoint(IPAddress.Any, PORT);
@@ -351,6 +360,7 @@ namespace Server
         
         private void Server_Load(object sender, EventArgs e)
         {
+            txtIP.Text = GetIP();
             string sqlserver = @"server=.; database=Students; integrated security = true;";
             SqlConnection connection = new SqlConnection(sqlserver);
             SqlDataReader read;
@@ -404,6 +414,37 @@ namespace Server
 
 
             }
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+
+            if (txtMesseage.Text != null) { 
+            string mess = txtMesseage.Text;
+            ServerResponse container = new ServerResponse();
+            container.Type = ServerResponseType.SendMessage;
+            container.Data = mess;
+            byte[] buffer = Serialize(container);
+
+                foreach (Socket client in clientList)
+                {
+                    try
+                    {
+                        client.Send(buffer);
+
+                        AddMessage("Đã gửi đến "+client.RemoteEndPoint.ToString() + ": " + txtMesseage.Text);
+                    }
+                    catch
+                    {
+                        AddMessage(client.RemoteEndPoint.ToString() + ": " + "Đã xảy ra sự cố trong quá trình gửi thông điệp. Đã đóng kết nối");
+
+                        clientList.Remove(client);
+                        client.Close();
+                    }
+                    txtMesseage.Text = "";
+                }
+            }
+
         }
     }
 }
