@@ -51,6 +51,8 @@
             this.txtIP = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -69,11 +71,11 @@
             // 
             // btnSendStudents
             // 
-            this.btnSendStudents.Location = new System.Drawing.Point(409, 80);
+            this.btnSendStudents.Location = new System.Drawing.Point(409, 81);
             this.btnSendStudents.Name = "btnSendStudents";
-            this.btnSendStudents.Size = new System.Drawing.Size(227, 45);
+            this.btnSendStudents.Size = new System.Drawing.Size(227, 24);
             this.btnSendStudents.TabIndex = 6;
-            this.btnSendStudents.Text = "Load Danh sách Sinh viên";
+            this.btnSendStudents.Text = "Lấy DS Từ CSDL";
             this.btnSendStudents.UseVisualStyleBackColor = true;
             this.btnSendStudents.Click += new System.EventHandler(this.btnSendStudents_Click);
             // 
@@ -100,7 +102,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblTimeLeft);
-            this.groupBox1.Location = new System.Drawing.Point(517, 145);
+            this.groupBox1.Location = new System.Drawing.Point(517, 170);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(119, 59);
             this.groupBox1.TabIndex = 10;
@@ -120,7 +122,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtSetTime);
-            this.groupBox2.Location = new System.Drawing.Point(409, 145);
+            this.groupBox2.Location = new System.Drawing.Point(409, 170);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(102, 59);
             this.groupBox2.TabIndex = 12;
@@ -285,12 +287,33 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chọn môn thi và đề thi";
             // 
+            // btnExcel
+            // 
+            this.btnExcel.Image = global::Server.Properties.Resources.icons8_folder_32;
+            this.btnExcel.Location = new System.Drawing.Point(561, 119);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(75, 45);
+            this.btnExcel.TabIndex = 30;
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(409, 127);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(146, 20);
+            this.textBox1.TabIndex = 31;
+            this.textBox1.Text = "Lấy DSSV Từ File Excel";
+            // 
             // Server
             // 
             this.AcceptButton = this.btnSend;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 563);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtIP);
@@ -348,6 +371,8 @@
         private System.Windows.Forms.TextBox txtIP;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

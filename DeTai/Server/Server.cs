@@ -266,6 +266,7 @@ namespace Server
                     client.Close();
                 }
             }
+            MessageBox.Show("Đã gửi danh sách cho Client");
         }
         
         private void btnSendFile_Click(object sender, EventArgs e)
@@ -481,6 +482,68 @@ namespace Server
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            dialog = new OpenFileDialog();
+            dialog.Filter = "All files (*.*)|*.*";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                fileName = dialog.FileName;
+                textBox1.Text = fileName;
+                
+                
+                LayDSExcel();
+                MessageBox.Show("Lấy DSSV thành công, gửi DS cho client");
+                
+            }
+           
+        }
+        void LayDSExcel()
+        {
+            string sqlserver = @"server=.; database=Students; integrated security = true;";
+            SqlConnection connection = new SqlConnection(sqlserver);
+            SqlDataReader read;
+            SqlCommand cmd = connection.CreateCommand();
+            connection.Open();
+
+            cmd.CommandText = "Select * from ThongTinSinhVien ";
+            read = cmd.ExecuteReader();
+            while (read.Read())
+            {
+                sinhVien = new Student();
+                sinhVien.ID = read.GetValue(0).ToString();
+                sinhVien.FullName = read.GetValue(1).ToString();
+                listStudent.Add(sinhVien);
+            }
+            cmd.Dispose();
+            read.Close();
+            connection.Close();
+
+            ServerResponse container = new ServerResponse();
+            container.Type = ServerResponseType.SendList;
+            container.Data = listStudent;
+
+            byte[] buffer = Serialize(container);
+
+            foreach (Socket client in clientList)
+            {
+                try
+                {
+                    client.Send(buffer);
+
+                    AddMessage(client.RemoteEndPoint.ToString() + ": " + "Đã gửi danh sách sinh viên thành công");
+                }
+                catch
+                {
+                    AddMessage(client.RemoteEndPoint.ToString() + ": " + "Đã xảy ra sự cố trong quá trình gửi danh sách. Đã đóng kết nối");
+
+                    clientList.Remove(client);
+                    client.Close();
+                }
+            }
         }
     }
 }
